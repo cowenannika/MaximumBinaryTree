@@ -9,18 +9,21 @@ public class BSTtest
         //TODO CHANGE CLASS AS NEEDED TO TEST CODE
         BST<String> tree = new BST<String>();
 
-        int L = Integer.parseInt(args[0]);
-        int R = Integer.parseInt(args[1]);
-        for(int i=2; i < args.length; i++)
+        int L = 4;
+        int R = 8;
+        for(int i = 1; i <= 10; i++)
         {
-            tree.insert(args[i]);
+            tree.insert(i);
 
         }
-
-        tree.delete(args[3]);
-        System.out.println(tree.find(args[4]));
-        tree.print();
         
+        tree.print();
+        System.out.println("-------");
+        tree.delete(2);
+        System.out.println(tree.find(2));
+        System.out.println("-------");
+        tree.print();
+        System.out.println("--------");
         System.out.println(tree.rangeSum(L, R));
     }
 }
